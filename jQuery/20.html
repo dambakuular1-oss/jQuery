@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <!-- №1 -->
+  <h2>Заголовок</h2>
+  <a href="#">Эта ссылка станет красной</a>
+  <a href="#">Эта не изменится</a>
+
+  <!-- №2 -->
+  <p>Первый абзац</p>
+  <p>Второй абзац — станет красным</p>
+  <p>Третий абзац — станет красным</p>
+  <div>Разделитель</div>
+  <p>Этот не изменится</p>
+
+  <!-- №3 -->
+  <ul>
+    <li>Обычный li</li>
+    <li class="www">li с классом www</li>
+    <li>Этот станет красным</li>
+    <li>Этот не изменится</li>
+  </ul>
+
+  <script>
+    $('h2 + a').css('color', 'red')
+    $('p + p').css('color', 'red')
+    $('li.www + li').css('color', 'red')
+  </script>
+
+</body>
+</html>

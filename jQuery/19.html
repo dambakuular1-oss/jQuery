@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <h2><i>Курсив 1</i></h2>
+  <h2><span><i>Этот не изменится</i></span></h2>
+  <h2><i>Курсив 2</i></h2>
+  <p><i>Этот тоже не изменится</i></p>
+
+  <script>
+    $('h2 > i').css('color', 'red')
+  </script>
+
+</body>
+</html>
