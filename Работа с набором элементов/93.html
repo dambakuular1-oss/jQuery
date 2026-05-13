@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <span>привет</span>
+  <span>мир</span>
+  <span>jquery</span>
+  <span>javascript</span>
+
+  <script>
+    const result = $.makeArray($('span')).map(function(el) {
+      const text = $(el).text();
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    });
+
+    console.log(result.join(', ')); // Привет, Мир, Jquery, Javascript
+  </script>
+
+</body>
+</html>

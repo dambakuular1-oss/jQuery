@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Элемент 1</li>
+    <li id="first">Элемент 2</li>
+    <li>Элемент 3</li>
+    <li id="test">Элемент 4</li>
+    <li>Элемент 5</li>
+    <li>Элемент 6</li>
+  </ul>
+
+  <script>
+    // №1 — только по имени тега, index() ищет среди li
+    const index1 = $('#test').index('li');
+    console.log(index1); // 3
+
+    // №2 — по тегу и селектору #first
+    const index2 = $('#first').index('li#first');
+    console.log(index2); // 1
+  </script>
+
+</body>
+</html>

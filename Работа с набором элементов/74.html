@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Элемент 1</li>
+    <li>Элемент 2</li>
+    <li>Элемент 3</li>
+    <li>Элемент 4</li>
+    <li>Элемент 5</li>
+    <li>Элемент 6</li>
+    <li>Элемент 7</li>
+  </ul>
+
+  <script>
+    // №1 — пятый li (индекс 4) → зелёный
+    $('li').eq(4).css('color', 'green');
+
+    // №2 — предпоследний li (индекс -2) → красный
+    $('li').eq(-2).css('color', 'red');
+  </script>
+
+</body>
+</html>

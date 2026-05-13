@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Элемент 1</li>
+    <li>Элемент 2</li>
+    <li class="test">Элемент 3</li>
+    <li>Элемент 4</li>
+    <li>Элемент 5</li>
+  </ul>
+
+  <script>
+    // №1 — элемент непосредственно ПЕРЕД .test → красный
+    $('.test').prev().css('color', 'red');
+
+    // №2 — элемент непосредственно ПОСЛЕ .test → зелёный
+    $('.test').next().css('color', 'green');
+  </script>
+
+</body>
+</html>

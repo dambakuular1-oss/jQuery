@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li class="www">Элемент 1</li>
+    <li>Элемент 2</li>
+    <li>Элемент 3</li>
+    <li class="test">Элемент 4</li>
+    <li>Элемент 5</li>
+    <li>Элемент 6</li>
+    <li class="www">Элемент 7</li>
+  </ul>
+
+  <script>
+    // №1 — все элементы перед .test → красный
+    $('.test').prevAll().css('color', 'red');
+
+    // №2 — все элементы после .test → зелёный
+    $('.test').nextAll().css('color', 'green');
+
+    // №3 — элементы между .test и .www (идём назад) → синий
+    $('.test').prevUntil('.www').css('color', 'blue');
+
+    // №4 — элементы между .www и .test (идём вперёд) → оранжевый
+    $('.www').nextUntil('.test').css('color', 'orange');
+  </script>
+
+</body>
+</html>

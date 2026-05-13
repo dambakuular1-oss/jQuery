@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <div class="test">
+    <ul>
+      <li><b>Элемент 1</b></li>
+      <li class="test"><b>Элемент 2</b></li>
+      <li>Элемент 3</li>
+    </ul>
+  </div>
+
+  <script>
+    $('b').parents('.test').css('color', 'red');
+  </script>
+
+</body>
+</html>

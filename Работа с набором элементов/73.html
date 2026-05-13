@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Элемент 1</li>
+    <li class="test">Элемент 2</li>
+    <li>Элемент 3</li>
+    <li class="test">Элемент 4</li>
+    <li>Элемент 5</li>
+    <li class="test">Элемент 6</li>
+  </ul>
+
+  <script>
+    const $items = $('li').not('.test');
+    console.log($items);
+  </script>
+
+</body>
+</html>

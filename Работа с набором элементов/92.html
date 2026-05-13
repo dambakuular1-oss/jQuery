@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <h2 class="test">Заголовок 1</h2>
+  <p>Абзац 1</p>
+
+  <h2>Заголовок 2</h2>
+  <p>Абзац 2</p>
+
+  <h2>Заголовок 3</h2>
+  <span>Спан 1</span>
+
+  <h2 class="test">Заголовок 4</h2>
+  <span>Спан 2</span>
+
+  <script>
+    // №1 — проверяем есть ли среди h2 элемент с классом test
+    const hasTest = $('h2').is('.test');
+    console.log(hasTest); // true
+
+    // №2 — если после h2 стоит p, добавить в конец текст заголовка
+    $('h2').next().each(function() {
+      if ($(this).is('p')) {
+        const headerText = $(this).prev('h2').text();
+        $(this).text($(this).text() + headerText);
+      }
+    });
+
+    // №3 — если после h2 стоит НЕ p, вставить абзац с текстом заголовка
+    $('h2').next().each(function() {
+      if (!$(this).is('p')) {
+        const headerText = $(this).prev('h2').text();
+        $('<p>').text(headerText).insertBefore($(this));
+      }
+    });
+  </script>
+
+</body>
+</html>

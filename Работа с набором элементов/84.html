@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <div>
+    <p>
+      <b>Текст 1</b>
+    </p>
+  </div>
+  <div>
+    <p>
+      <b>Текст 2</b>
+    </p>
+  </div>
+  <div>
+    <b>Текст 3</b>
+  </div>
+
+  <script>
+    $('b').closest('div').css('color', 'red');
+  </script>
+
+</body>
+</html>

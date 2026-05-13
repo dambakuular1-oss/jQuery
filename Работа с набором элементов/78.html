@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li class="www">Элемент 1</li>
+    <li>Элемент 2</li>
+    <li class="www">Элемент 3</li>
+    <li>Элемент 4</li>
+    <li class="www">Элемент 5</li>
+  </ul>
+
+  <script>
+    $('li').filter('.www').each(function() {
+      $(this).text($(this).text() + '!');
+    });
+  </script>
+
+</body>
+</html>

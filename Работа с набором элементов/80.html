@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li class="test">Элемент 1</li>
+    <li>Элемент 2</li>
+    <li class="www">Элемент 3</li>
+    <li class="test">Элемент 4</li>
+    <li>Элемент 5</li>
+  </ul>
+
+  <script>
+    // №1 — все соседи .www → красный
+    $('.www').siblings().css('color', 'red');
+
+    // №2 — соседи .www у которых есть класс .test → зелёный
+    $('.www').siblings('.test').css('color', 'green');
+
+    // №3 — все соседи .www, кроме .test → синий
+    $('.www').siblings().not('.test').css('color', 'blue');
+  </script>
+
+</body>
+</html>

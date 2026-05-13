@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <div class="www">Оригинальный div</div>
+
+  <script>
+    $('.www').clone()
+             .css('color', 'red')
+             .text('???')
+             .insertBefore('.www');
+  </script>
+
+</body>
+</html>
