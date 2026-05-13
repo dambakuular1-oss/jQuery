@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <input type="checkbox" checked> Чекбокс 1 (отмечен)<br>
+  <input type="checkbox"> Чекбокс 2 (не отмечен)<br>
+  <input type="checkbox" checked> Чекбокс 3 (отмечен)<br>
+  <input type="checkbox"> Чекбокс 4 (не отмечен)<br>
+
+  <script>
+    // №1
+    $('input:checked').prop('checked', false)
+
+    // №2
+    $('input:not(:checked)').prop('checked', true)
+
+    // №3
+    $('input[type="checkbox"]').each(function() {
+      $(this).prop('checked', !$(this).prop('checked'))
+    })
+  </script>
+
+</body>
+</html>

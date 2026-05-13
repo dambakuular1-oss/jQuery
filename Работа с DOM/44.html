@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+  <style>
+    .www { color: red; }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li class="www">Элемент 1 (есть класс www)</li>
+    <li>Элемент 2 (нет класса www)</li>
+    <li class="www">Элемент 3 (есть класс www)</li>
+    <li>Элемент 4 (нет класса www)</li>
+  </ul>
+
+  <script>
+    $('li').each(function() {
+      $(this).toggleClass('www')
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Элемент 1</li>
+    <li>Элемент 2</li>
+    <li>Элемент 3</li>
+  </ul>
+
+  <a href="https://google.com">Google</a>
+  <a href="https://youtube.com">YouTube</a>
+  <a href="https://github.com">GitHub</a>
+
+  <script>
+    // №1
+    $('li').addClass('test')
+
+    // №2
+    $('a').attr('href', '!')
+
+    // №3
+    $('a').attr('target', '_blank')
+
+    // №4
+    $('a').each(function() {
+      $(this).text($(this).attr('href'))
+    })
+
+    // №5
+    $('a').each(function() {
+      $(this).text('(' + $(this).attr('href') + ')')
+    })
+
+    // №6
+    $('a').each(function() {
+      $(this).attr('title', $(this).text())
+    })
+  </script>
+
+</body>
+</html>
