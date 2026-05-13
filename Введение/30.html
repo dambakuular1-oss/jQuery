@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Первый</li>
+    <li>Второй</li>
+    <li>Третий</li>
+    <li>Четвёртый</li>
+  </ul>
+
+  <script>
+    $('li').each(function(index) {
+      $(this).text(index + 1)
+    })
+  </script>
+
+</body>
+</html>

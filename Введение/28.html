@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <ul>
+    <li>Обычный элемент</li>
+    <li class="www">li с классом www</li>
+    <li>Ещё один элемент</li>
+  </ul>
+
+  <script>
+    $('li.www').parent().css('color', 'red')
+  </script>
+
+</body>
+</html>

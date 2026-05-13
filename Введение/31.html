@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <p id="aaa">Абзац 1</p>
+  <p id="bbb">Абзац 2</p>
+  <p id="ccc">Абзац 3</p>
+
+  <script>
+    $('p').map(function(index) {
+      $(this).attr('id', index + 1)
+    })
+
+    // Проверка в консоли
+    $('p').each(function() {
+      console.log($(this).attr('id'))
+    })
+  </script>
+
+</body>
+</html>

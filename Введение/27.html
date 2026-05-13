@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+  <style>
+    p, div { min-height: 20px; margin: 5px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+  <!-- №1 -->
+  <p></p>
+  <p>Непустой абзац — не изменится</p>
+  <p></p>
+
+  <!-- №2 -->
+  <div></div>
+  <div>Непустой див — станет красным</div>
+  <div>Ещё один непустой — станет красным</div>
+  <div></div>
+
+  <script>
+    // №1
+    $('p:empty').css('background-color', 'red')
+
+    // №2
+    $('div:not(:empty)').css('background-color', 'red')
+  </script>
+
+</body>
+</html>

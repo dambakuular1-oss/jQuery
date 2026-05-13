@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery.js"></script>
+</head>
+<body>
+
+  <!-- №1 -->
+  <h1>Заголовок h1</h1>
+  <h2>Заголовок h2</h2>
+  <h3>Заголовок h3</h3>
+
+  <!-- №2 -->
+  <h2 class="zzz">Заголовок с классом zzz</h2>
+  <h3 class="zzz">Заголовок с классом zzz</h3>
+  <h2>Обычный заголовок</h2>
+
+  <!-- №3 -->
+  <h2>Первый заголовок</h2>
+  <h3>Сразу за заголовком — станет красным</h3>
+  <p>Текст</p>
+  <h2>Этот не изменится</h2>
+
+  <!-- №4 -->
+  <h2 class="test">Заголовок test</h2>
+  <h3 class="test">Сразу за test — станет красным</h3>
+  <h2 class="test">Этот не изменится (перед ним не test)</h2>
+
+  <script>
+    // №1
+    $(':header').css('color', 'red')
+
+    // №2
+    $(':header.zzz').css('color', 'red')
+
+    // №3
+    $(':header + :header').css('color', 'red')
+
+    // №4
+    $(':header.test + :header.test').css('color', 'red')
+  </script>
+
+</body>
+</html>
